@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Private, authenticated pages - no value in search results
+Disallow: /dashboard
+Disallow: /analyze
+Disallow: /results/
+Disallow: /profile
+Disallow: /history
+Disallow: /settings
+
+Sitemap: https://job-fit-analyzer-68.preview.emergentagent.com/sitemap.xml

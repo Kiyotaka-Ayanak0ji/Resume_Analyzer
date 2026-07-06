@@ -1,0 +1,9 @@
+/* Resume Screener global styles */
+
+.font-heading {
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}

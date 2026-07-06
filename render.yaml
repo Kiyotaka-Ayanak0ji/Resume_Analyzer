@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: resume-decoded-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-deploy.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: MONGO_URL
+        sync: false
+      - key: DB_NAME
+        value: resume_decoded
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ENCRYPTION_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: GOOGLE_CLIENT_ID
+        value: ""

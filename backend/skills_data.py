@@ -1,0 +1,145 @@
+"""Seed skills knowledge base - categories and base skills for the in-house matching engine."""
+
+SKILL_SEED = {
+    "programming": [
+        "python", "javascript", "typescript", "java", "c++", "c#", "go", "rust",
+        "ruby", "php", "swift", "kotlin", "scala", "r", "matlab", "perl", "bash",
+        "sql", "html", "css", "sass", "dart", "objective-c", "elixir", "haskell",
+    ],
+    "frontend": [
+        "react", "angular", "vue", "next.js", "nuxt", "svelte", "redux", "tailwind",
+        "bootstrap", "jquery", "webpack", "vite", "responsive design", "figma",
+        "ui design", "ux design", "accessibility", "web components", "storybook",
+    ],
+    "backend": [
+        "node.js", "express", "fastapi", "django", "flask", "spring boot", "rails",
+        "laravel", ".net", "graphql", "rest apis", "grpc", "websockets",
+        "microservices", "api design", "serverless",
+    ],
+    "database": [
+        "mongodb", "postgresql", "mysql", "redis", "elasticsearch", "sqlite",
+        "oracle", "dynamodb", "cassandra", "firebase", "supabase", "neo4j",
+        "database design", "data modeling", "query optimization",
+    ],
+    "cloud_devops": [
+        "aws", "azure", "gcp", "docker", "kubernetes", "terraform", "ansible",
+        "jenkins", "ci/cd", "github actions", "gitlab ci", "linux", "nginx",
+        "cloudformation", "helm", "prometheus", "grafana", "monitoring",
+        "infrastructure as code", "devops", "site reliability",
+    ],
+    "data_ai": [
+        "machine learning", "deep learning", "nlp", "computer vision", "pytorch",
+        "tensorflow", "scikit-learn", "pandas", "numpy", "data analysis",
+        "data science", "data engineering", "etl", "spark", "hadoop", "airflow",
+        "tableau", "power bi", "statistics", "a/b testing", "llm", "generative ai",
+        "prompt engineering", "data visualization", "big data", "kafka",
+    ],
+    "mobile": [
+        "ios", "android", "react native", "flutter", "xamarin", "mobile development",
+        "app store", "swiftui",
+    ],
+    "testing": [
+        "unit testing", "integration testing", "selenium", "cypress", "playwright",
+        "jest", "pytest", "test automation", "tdd", "qa", "quality assurance",
+    ],
+    "security": [
+        "cybersecurity", "penetration testing", "oauth", "encryption", "security audits",
+        "owasp", "compliance", "soc 2", "gdpr",
+    ],
+    "management_soft": [
+        "agile", "scrum", "kanban", "jira", "project management", "product management",
+        "leadership", "mentoring", "team management", "stakeholder management",
+        "communication", "problem solving", "collaboration", "time management",
+        "critical thinking", "presentation", "negotiation", "strategic planning",
+        "cross-functional", "roadmap", "okrs", "budgeting", "hiring", "coaching",
+    ],
+    "business": [
+        "marketing", "seo", "content marketing", "social media", "google analytics",
+        "crm", "salesforce", "sales", "business development", "customer success",
+        "account management", "financial analysis", "excel", "accounting",
+        "business analysis", "market research", "copywriting", "email marketing",
+        "hubspot", "e-commerce", "supply chain", "operations", "recruiting",
+        "human resources", "customer service", "public relations", "branding",
+    ],
+    "design": [
+        "graphic design", "adobe photoshop", "adobe illustrator", "sketch",
+        "prototyping", "wireframing", "user research", "design systems",
+        "motion design", "video editing", "3d modeling",
+    ],
+    "tools": [
+        "git", "github", "gitlab", "bitbucket", "vs code", "postman", "slack",
+        "notion", "confluence", "trello", "asana",
+    ],
+}
+
+SYNONYM_SEED = {
+    "js": "javascript",
+    "ts": "typescript",
+    "reactjs": "react",
+    "react.js": "react",
+    "nodejs": "node.js",
+    "node": "node.js",
+    "nextjs": "next.js",
+    "vuejs": "vue",
+    "vue.js": "vue",
+    "angularjs": "angular",
+    "postgres": "postgresql",
+    "mongo": "mongodb",
+    "k8s": "kubernetes",
+    "amazon web services": "aws",
+    "google cloud": "gcp",
+    "google cloud platform": "gcp",
+    "microsoft azure": "azure",
+    "ml": "machine learning",
+    "ai": "machine learning",
+    "artificial intelligence": "machine learning",
+    "natural language processing": "nlp",
+    "continuous integration": "ci/cd",
+    "continuous deployment": "ci/cd",
+    "cicd": "ci/cd",
+    "github action": "github actions",
+    "restful": "rest apis",
+    "rest api": "rest apis",
+    "restful apis": "rest apis",
+    "unit tests": "unit testing",
+    "mentored": "mentoring",
+    "mentorship": "mentoring",
+    "led a team": "leadership",
+    "team lead": "leadership",
+    "scrum master": "scrum",
+    "powerbi": "power bi",
+    "sklearn": "scikit-learn",
+    "tf": "tensorflow",
+    "react-native": "react native",
+    "golang": "go",
+    "large language models": "llm",
+    "large language model": "llm",
+    "gpt": "llm",
+    "dotnet": ".net",
+    "expressjs": "express",
+    "express.js": "express",
+    "tailwindcss": "tailwind",
+    "tailwind css": "tailwind",
+    "springboot": "spring boot",
+    "spring": "spring boot",
+    "photoshop": "adobe photoshop",
+    "illustrator": "adobe illustrator",
+    "search engine optimization": "seo",
+    "quality assurance": "qa",
+    "test driven development": "tdd",
+    "ecommerce": "e-commerce",
+    "hr": "human resources",
+    "biz dev": "business development",
+    "ux": "ux design",
+    "ui": "ui design",
+    "user experience": "ux design",
+    "user interface": "ui design",
+}
+
+
+def all_skills():
+    skills = []
+    for cat, items in SKILL_SEED.items():
+        for s in items:
+            skills.append({"skill": s, "category": cat})
+    return skills

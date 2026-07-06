@@ -1,0 +1,18 @@
+# Minimal dependencies for deployment (Render/Railway/self-host).
+# Install with CPU-only torch to keep the image small:
+#   pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-deploy.txt
+fastapi>=0.110.0
+uvicorn[standard]>=0.25.0
+motor>=3.3.0
+python-dotenv>=1.0.0
+pydantic[email]>=2.6.0
+python-multipart>=0.0.9
+PyJWT>=2.8.0
+passlib[bcrypt]>=1.7.4
+cryptography>=42.0.0
+google-auth>=2.29.0
+httpx>=0.27.0
+scikit-learn>=1.4.0
+sentence-transformers>=3.0.0
+pdfplumber>=0.11.0
+python-docx>=1.1.0

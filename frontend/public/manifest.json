@@ -1,0 +1,10 @@
+{
+  "short_name": "Resume Decoded",
+  "name": "Resume Decoded - Free Resume Checker & Job Match Analyzer",
+  "description": "Free, open-source resume checker. Get a match score against any job description, see missing skills and fix your resume fast.",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#10536b",
+  "background_color": "#f7fafc",
+  "icons": []
+}
